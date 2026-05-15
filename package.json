@@ -1,0 +1,33 @@
+{
+  "name": "retrywrap",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript utility for retrying async operations with configurable retries, delays, exponential backoff, and timeout support.",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "retry",
+    "async",
+    "backoff",
+    "exponential-backoff",
+    "timeout",
+    "retry-mechanism",
+    "retry-logic",
+    "promise",
+    "async-retry",
+    "retry-wrapper",
+    "fault-tolerance",
+    "resilience",
+    "error-handling",
+    "nodejs",
+    "browser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gotocartik/retrywrap.git"
+  },
+  "funding": "https://buymeacoffee.com/gotocartik",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
