@@ -18,6 +18,8 @@
     "retry-wrapper",
     "fault-tolerance",
     "resilience",
+    "jitter",
+    "retry-callback",
     "error-handling",
     "nodejs",
     "browser"

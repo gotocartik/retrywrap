@@ -3,9 +3,11 @@ export default async function retry(fn, options = {}) {
     retries = 3,
     delay: baseDelay = 1000,
     backoff = false,
+    jitter = false,
     retryOn = null,
     timeout = 0,
     log = false,
+    onRetry = null,
   } = options;
 
   let lastError;
@@ -49,9 +51,16 @@ export default async function retry(fn, options = {}) {
         console.log(`\x1b[2m[retrywrap]\x1b[0m Attempt ${attempt}/${retries} failed: ${err.message}`);
       }
 
+      if (typeof onRetry === "function") {
+        onRetry({ attempt, remaining: retries - attempt, error: err });
+      }
+
       let wait = baseDelay;
       if (backoff) {
         wait = baseDelay * Math.pow(2, attempt - 1);
+      }
+      if (jitter) {
+        wait = Math.round(wait * (0.5 + Math.random() * 0.5));
       }
 
       await new Promise((resolve) => setTimeout(resolve, wait));

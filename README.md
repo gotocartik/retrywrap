@@ -1,6 +1,7 @@
 # retrywrap
 
 ![npm](https://img.shields.io/npm/dt/retrywrap)
+![npm](https://img.shields.io/npm/dw/retrywrap)
 ![npm version](https://img.shields.io/npm/v/retrywrap)
 ![license](https://img.shields.io/npm/l/retrywrap)
 
